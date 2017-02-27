@@ -3,7 +3,9 @@
 <h2> <%= link_to "< back to Albums", albums_path %> </h2>
 
 <% @album.photos.each do |photo| %>
-<%= link_to image_tag(photo.img_url), album_photo_path(@album, photo) %>
+  <div class="photo">
+    <%= link_to image_tag(photo.img_url), album_photo_path(@album, photo) %>
+  </div>
 <% end %>
 
 <h2><%= link_to "Edit Album", edit_album_path(@album) %> </h2>

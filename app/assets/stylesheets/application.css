@@ -14,13 +14,13 @@
  *= require_self
  */
 
- img {
-   width: 200px;
-   height: 200px;
+ .photo img {
+   width: 500px;
+   height: 350px;
  }
 
 .album_cover img {
-    width: 200px
+    width: 200px;
     height: 200px;
     position: relative;
     overflow: hidden;
