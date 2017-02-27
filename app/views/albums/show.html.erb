@@ -2,6 +2,10 @@
 <time> Updated at <%= @album.updated_at %></time>
 <h2> <%= link_to "< back to Albums", albums_path %> </h2>
 
-<h2> <%= "Display Photos Here" %></h2>
+<% @album.photos.each do |photo| %>
+<%= link_to image_tag(photo.img_url), album_photo_path(@album, photo) %>
+<% end %>
 
 <h2><%= link_to "Edit Album", edit_album_path(@album) %> </h2>
+
+<h2> <%= link_to "Add Photo", new_album_photo_path(@album) %></h2>
