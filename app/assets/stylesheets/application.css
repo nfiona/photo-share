@@ -19,6 +19,11 @@
    height: 350px;
  }
 
+ .photo_show img {
+   width: 700px;
+   height: 450px;
+ }
+
 .album_cover img {
     width: 200px;
     height: 200px;
