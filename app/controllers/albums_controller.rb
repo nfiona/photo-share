@@ -13,9 +13,9 @@ class AlbumsController < ApplicationController
   end
 
   def create
-    @album = Album.create(album_params)
+    @album = current_user.albums.create!(album_params)
 
-    redirect_to albums_path
+    redirect_to album_path(@album)
   end
 
   def edit
@@ -31,7 +31,11 @@ end
 
 def destroy
   @album = Album.find(params[:id])
-  @album.destroy
+  if @album.user == current_user
+    @album.destroy
+  else
+    flash[:alert] = "Only the owner of the album can delete!"
+  end
 
   redirect_to albums_path
 end
