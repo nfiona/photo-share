@@ -1,0 +1,10 @@
+<h1>Edit Album</h1>
+
+<%= form_for @album do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.submit "Update" %>
+<% end %>
+
+<%= link_to "Delete Album", @album, method: :delete %>
