@@ -18,3 +18,17 @@
    width: 200px;
    height: 200px;
  }
+
+.album_cover img {
+    width: 200px
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+/*.album_cover img {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+}*/

@@ -31,7 +31,7 @@ end
 
 def destroy
   @album = Album.find(params[:id])
-  @album.destroy 
+  @album.destroy
 
   redirect_to albums_path
 end
@@ -41,7 +41,7 @@ end
 
 private
 def album_params
-  params.require(:album).permit(:title)
+  params.require(:album).permit(:title, :img_url)
 end
 
 

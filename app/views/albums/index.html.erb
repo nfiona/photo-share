@@ -1,6 +1,12 @@
 <h1>Your Albums <%= link_to "(+)", new_album_path %> </h1>
 
 <% @albums.each do |album| %>
-  <h2> <%= link_to album.title, album_path(album) %> </h2>
-  <time> Created at <%= album.created_at %></time>
+<h2> <%= link_to album.title, album_path(album) %> </h2>
+  <div class="album_cover">
+    <img src="<%= album.img_url %>"/>
+  </div>
+      <br>
+      <time> Created at <%= album.created_at %></time>
+
+
 <% end %>
