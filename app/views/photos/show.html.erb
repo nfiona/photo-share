@@ -3,10 +3,14 @@
  </div>
 
  <time> Added <%= @photo.updated_at %> </time>
+ 
 
 <p> <%= @photo.description %> </p>
 
+<% if @album.user == current_user %>
 <h2> <%= link_to "Edit Photo", edit_album_photo_path(@album,@photo) %> </h2>
+<% end %>
+
 <h2> <%= link_to "< back to Album", album_path(@album) %> </h2>
 
 <div class='comments'>

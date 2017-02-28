@@ -1,12 +1,18 @@
-<h1>Your Albums <%= link_to "(+)", new_album_path %> </h1>
+<h1>Albums <%= link_to "(+)", new_album_path %> </h1>
 
 <% @albums.each do |album| %>
 
   <div class="albums">
     <h2> <%= link_to album.title, album_path(album) %> </h2>
-         <%= link_to image_tag(album.img_url), album_path(album) %>
+         <%= link_to album_path(album) do %>
+          <div class="album-image" style="background: url(<%= album.img_url %>);background-size:cover; background-position: center;">
+          </div>
+         <% end %>
+         <h6> Created by <%= album.user.email %> </h6>
+         <time> Created at <%= album.created_at %></time>
           <br>
-          <time> Created at <%= album.created_at %></time>
+
 
   </div>
+
     <% end %>

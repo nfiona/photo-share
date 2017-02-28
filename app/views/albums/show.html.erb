@@ -2,14 +2,17 @@
 <time> Updated at <%= @album.updated_at %></time>
 <h2> <%= link_to "< back to Albums", albums_path(@album) %> </h2>
 
+<div class="photo-holder">
+
 <% @album.photos.each do |photo| %>
   <div class="photo">
     <%= link_to image_tag(photo.img_url), album_photo_path(@album, photo) %>
   </div>
 <% end %>
 
+</div>
+
 <% if @album.user == current_user %>
 <h2><%= link_to "Edit Album", edit_album_path(@album) %> </h2>
-<% end %>
-
 <h2> <%= link_to "Add Photo", new_album_photo_path(@album) %></h2>
+<% end %>

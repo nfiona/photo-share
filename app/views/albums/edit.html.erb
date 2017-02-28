@@ -1,3 +1,5 @@
+<div class="well">
+
 <h1>Edit Album</h1>
 
 <%= form_for @album do |f| %>
@@ -9,5 +11,7 @@
 
   <%= f.submit "Update" %>
 <% end %>
+</div>
 
-<%= link_to "Delete Album", @album, method: :delete %>
+<h2> <%= link_to "Delete Album", @album, method: :delete %> </h2>
+<h2> <%= link_to "< back to Albums", albums_path(@album) %> </h2>
