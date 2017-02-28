@@ -14,26 +14,46 @@
  *= require_self
  */
 
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ body {
+   display: inline-block;
+
+ }
+
  .photo img {
-   width: 500px;
-   height: 350px;
+   max-width: 400px;
+   max-height: 300px;
+
  }
 
  .photo_show img {
-   width: 700px;
-   height: 450px;
+   max-width: 950px;
+   height: auto;
  }
 
-.album_cover img {
-    width: 200px;
-    height: 200px;
-    position: relative;
-    overflow: hidden;
+.albums {
+  display: inline-block;
+  justify-content: space-between;
+  width: 300px;
+
 }
 
-/*.album_cover img {
+.albums img {
+  max-width: 300px;
+  height: 300px;
   position: absolute;
-  display: block;
-  top: 0;
-  left: 0;
-}*/
+  clip: rect(0px,300px,300px,0px);
+}
+
+// .album_cover img {
+//     height: 300px;
+//     padding: 20px;
+// }
+//
+// .album_coverbox img {
+//   position: absolute;
+//   clip: rect(0px,300px,300px,0px);
+//   margin: 0 auto;
+// }
