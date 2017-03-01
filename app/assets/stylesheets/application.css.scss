@@ -71,14 +71,15 @@ main {
 }
 
 .photo-holder {
-  flex-grow: 2;
+  min-height: 100vh;
   display: flex;
-  justify-content: space-between;
-
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .photo img{
-  flex-basis: 100px;
+  // flex-basis: 100px;
   max-width: 500px;
   max-height: 300px;
   border-radius: 10px;
