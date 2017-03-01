@@ -6,16 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Comment.destroy_all
-Photo.destroy_all
-Album.destroy_all
+# Comment.destroy_all
+# Photo.destroy_all
+# Album.destroy_all
+# User.destroy_all
+#
+# kitties = Album.create(title: "The Time is Meow!", img_url: "https://i.ytimg.com/vi/bcENL_Vdoqw/maxresdefault.jpg")
 
-kitties = Album.create(title: "The Time is Meow!", img_url: "https://i.ytimg.com/vi/bcENL_Vdoqw/maxresdefault.jpg")
-
-
-kitty_one = Photo.create(img_url: "http://www.beaconsinn.com/images/s5.favim.com/orig/54/cute-kitty-lovely-Favim.com-520357.jpg", description: "test", album: kitties, settings: "ISO 500")
-kitty_two = Photo.create(img_url: "https://i.ytimg.com/vi/bcENL_Vdoqw/maxresdefault.jpg", description: "test", album: kitties, settings: "ISO 400")
-
-
-Comment.create(body: "Test Comment", photo: kitty_one)
-Comment.create(body: "Test Comment", photo: kitty_two)
+#
+# kitty_one = Photo.create(img_url: "http://www.beaconsinn.com/images/s5.favim.com/orig/54/cute-kitty-lovely-Favim.com-520357.jpg", description: "test", album: kitties, settings: "ISO 500")
+# kitty_two = Photo.create(img_url: "https://i.ytimg.com/vi/bcENL_Vdoqw/maxresdefault.jpg", description: "test", album: kitties, settings: "ISO 400")
+#
+#
+# Comment.create(body: "Test Comment", photo: kitty_one)
+# Comment.create(body: "Test Comment", photo: kitty_two)

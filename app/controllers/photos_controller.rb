@@ -13,7 +13,7 @@ class PhotosController < ApplicationController
 
     def create
       @album = Album.find(params[:album_id])
-      @photo = @album.current_user.photos.create!(photo_params)
+      @photo = @album.photos.create!(photo_params)
 
       redirect_to album_path(@album)
     end
@@ -43,12 +43,6 @@ class PhotosController < ApplicationController
     def photo_params
       params.require(:photo).permit(:img_url, :description, :settings)
     end
-
-
-
-
-
-
 
 
 

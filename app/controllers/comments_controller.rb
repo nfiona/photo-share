@@ -8,8 +8,8 @@ class CommentsController < ApplicationController
     def create
       @album = Album.find(params[:album_id])
       @photo = Photo.find(params[:photo_id])
-      @comment = @photo.comments.create!(comment_params)
-      redirect_to album_photo_path(@album,@photo)
+      @comment = @photo.comments.create!(comment_params.merge(user: current_user))
+      redirect_to album_photo_path(@album, @photo)
     end
     def edit
       @album = Album.find(params[:album_id])
@@ -38,7 +38,7 @@ class CommentsController < ApplicationController
     end
     private
     def comment_params
-      params.require(:comment).permit(:body).merge(user: current_user)
+      params.require(:comment).permit(:body)
     end
 
 

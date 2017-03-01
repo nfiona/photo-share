@@ -25,11 +25,24 @@
    text-align: center;
    color: #636664;
    font-family: 'Raleway', sans-serif;
-
+   width: 100%;
+   height: 100%;
+   display: block;
  }
+ body::after {
+  content: "";
+  background-image: url(http://www.themathlab.com/alltreasure/gameofdots/bigdotsheet.gif) repeat 0 50%;;
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
 
 main {
-  background-image: url(https://c1.staticflickr.com/9/8216/8332765990_3aa70f3497_b.jpg);
+  background-image: url(http://www.publicdomainpictures.net/pictures/170000/velka/bokeh-background-1463395893ZZs.jpg);
   background-size: cover;
 }
 
@@ -47,6 +60,7 @@ main {
   justify-content: space-between;
   width: 300px;
   padding: 20px;
+  text-align: center;
 }
 
 .album-image {
@@ -100,4 +114,13 @@ main {
 
 p {
   font-size: 20px;
+}
+
+h1 {
+  text-shadow:5px 5px 5px #CED4D0;
+}
+
+h2 a {
+  text-decoration: none !important;
+  color: #FF7A1F;
 }
