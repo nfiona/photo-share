@@ -13,7 +13,7 @@ Album.destroy_all
 kitties = Album.create(title: "The Time is Meow!", img_url: "https://i.ytimg.com/vi/bcENL_Vdoqw/maxresdefault.jpg")
 
 
-kitty_one = Photo.create(img_url: "http://www.beaconsinn.com/images/s5.favim.com/orig/54/cute-kitty-lovely-Favim.com-520357.jpg", description: "test", album: kitties, "ISO 500" )
+kitty_one = Photo.create(img_url: "http://www.beaconsinn.com/images/s5.favim.com/orig/54/cute-kitty-lovely-Favim.com-520357.jpg", description: "test", album: kitties, settings: "ISO 500")
 kitty_two = Photo.create(img_url: "https://i.ytimg.com/vi/bcENL_Vdoqw/maxresdefault.jpg", description: "test", album: kitties, settings: "ISO 400")
 
 

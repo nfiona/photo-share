@@ -1,6 +1,6 @@
 <h1> <%= @album.title %></h1>
-<time> Updated at <%= @album.updated_at %></time>
-<h2> <%= link_to "< back to Albums", albums_path(@album) %> </h2>
+<h6> <time> Updated at <%= @album.updated_at %></time> </h6>
+<h4> <%= link_to "< back to Albums", albums_path(@album) %> </h4>
 
 <div class="photo-holder">
 
@@ -13,6 +13,6 @@
 </div>
 
 <% if @album.user == current_user %>
-<h2><%= link_to "Edit Album", edit_album_path(@album) %> </h2>
-<h2> <%= link_to "Add Photo", new_album_photo_path(@album) %></h2>
+<h3><%= link_to "Edit Album", edit_album_path(@album) %> </h3>
+<h3> <%= link_to "Add Photo", new_album_photo_path(@album) %></h3>
 <% end %>

@@ -8,11 +8,8 @@
           <div class="album-image" style="background: url(<%= album.img_url %>);background-size:cover; background-position: center;">
           </div>
          <% end %>
-         <h6> Created by <%= album.user.email %> </h6>
-         <time> Created at <%= album.created_at %></time>
-          <br>
-
-
+         <h6> Created by <%= album.user.email %> at <time> <%= album.created_at %></time> </h6>
+        
   </div>
 
     <% end %>

@@ -2,12 +2,12 @@
 
   <div class="photo_show">
     <img src="<%= @photo.img_url %>" />
-    <p> "<%= @photo.description %>" | <time> Added <%= @photo.updated_at %> </time>   </p>
+    <h6> "<%= @photo.description %>" | <time> Added <%= @photo.updated_at %> </time> </h6>
    </div>
 
    <div class="photo-settings">
       <h3>Photo Settings</h3>
-       <%= @photo.settings %>
+       <p> <%= @photo.settings %> </p>
     </div>
 
 
@@ -23,13 +23,12 @@
 <h3>Comments <%= link_to "(+)", new_album_photo_comment_path(@album, @photo) %> </h3>
 <% @photo.comments.each do |comment| %>
   <div>
-
-    <time>Updated <%= comment.updated_at %></time>
     <p>
-      <%= comment.body %>
+     <%= comment.body %>
     </p>
     <%= link_to "Edit", edit_album_photo_comment_path(@album, @photo, comment) %> |
     <%= link_to "Delete", album_photo_comment_path(@album, @photo, comment), method: :delete %>
+      <h6> <time>Updated <%= comment.updated_at %></time> </h6>
   </div>
 <% end %>
 </div>

@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>PhotoShare</title>
+    <title>unFilter.It</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700|Raleway" rel="stylesheet">
   </head>
 
   <body>
+
+  <main class="main-title">
+      <h1> <%= link_to "unFilter.iT", root_path %></h1>
+  </main>
+
 <div class="container">
       <% if !current_user %>
       <%= link_to "Sign up", new_user_registration_path %>
       <%= link_to "Sign in", new_user_session_path %>
-    <% else %>
+      <% else %>
       <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
         <%= current_user.email %>
-    <% end %>
+        <% end %>
 
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
-  </div>
+
+</div>
   </body>
 </html>
