@@ -25,7 +25,7 @@
     <div>
       <p>
        <%= comment.body %>
-       <h6> Updated at <%# comment.user.email %><time> <%= comment.updated_at %></time> </h6>
+       <h6> Updated by <%= comment.user %> at <time> <%= comment.updated_at %></time> </h6>
       </p>
       <% if comment.user == current_user %>
           <%= link_to "Edit", edit_album_photo_comment_path(@album, @photo, comment) %> |

@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
     def create
       @album = Album.find(params[:album_id])
       @photo = Photo.find(params[:photo_id])
-      @comment = @photo.comments.create(comment_params)
+      @comment = @photo.comments.create!(comment_params)
       redirect_to album_photo_path(@album,@photo)
     end
     def edit
@@ -33,12 +33,12 @@ class CommentsController < ApplicationController
     else
       flash[:alert] = "Only the owner of the comment can delete!"
     end
-    
+
       redirect_to album_photo_path(@album,@photo)
     end
     private
     def comment_params
-      params.require(:comment).permit(:body)
+      params.require(:comment).permit(:body).merge(user: current_user)
     end
 
 
