@@ -26,9 +26,11 @@
     <p>
      <%= comment.body %>
     </p>
-    <%= link_to "Edit", edit_album_photo_comment_path(@album, @photo, comment) %> |
-    <%= link_to "Delete", album_photo_comment_path(@album, @photo, comment), method: :delete %>
-      <h6> <time>Updated <%= comment.updated_at %></time> </h6>
+    <% if comment.user == current_user %>
+        <%= link_to "Edit", edit_album_photo_comment_path(@album, @photo, comment) %> |
+        <%= link_to "Delete", album_photo_comment_path(@album, @photo, comment), method: :delete %>
+    <% end %>
   </div>
+  <h6> Updated by <%# comment.user.email(comment,@user) %> at <time> <%= comment.updated_at %></time> </h6>
 <% end %>
 </div>

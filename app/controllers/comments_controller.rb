@@ -27,7 +27,13 @@ class CommentsController < ApplicationController
       @album = Album.find(params[:album_id])
       @photo = Photo.find(params[:photo_id])
       @comment = Comment.find(params[:id])
+
+      if @comment.user == current_user
       @comment.destroy
+    else
+      flash[:alert] = "Only the owner of the comment can delete!"
+    end
+    
       redirect_to album_photo_path(@album,@photo)
     end
     private
