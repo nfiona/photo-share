@@ -1,11 +1,17 @@
-<div class="photo_show">
-  <img src="<%= @photo.img_url %>" />
- </div>
+<div class="photo-wrap">
 
- <time> Added <%= @photo.updated_at %> </time>
- 
+  <div class="photo_show">
+    <img src="<%= @photo.img_url %>" />
+    <p> "<%= @photo.description %>" | <time> Added <%= @photo.updated_at %> </time>   </p>
+   </div>
 
-<p> <%= @photo.description %> </p>
+   <div class="photo-settings">
+      <h3>Photo Settings</h3>
+       <%= @photo.settings %>
+    </div>
+
+
+  </div>
 
 <% if @album.user == current_user %>
 <h2> <%= link_to "Edit Photo", edit_album_photo_path(@album,@photo) %> </h2>

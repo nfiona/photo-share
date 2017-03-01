@@ -54,3 +54,13 @@
   max-width: 950px;
   height: auto;
 }
+
+.photo-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.photo-settings {
+  max-width: 50px;
+  height: 50px;
+}
