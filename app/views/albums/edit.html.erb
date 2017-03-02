@@ -13,5 +13,5 @@
 <% end %>
 </div>
 
-<h2> <%= link_to "Delete Album", @album, method: :delete %> </h2>
+<h2> <%= link_to "Delete Album", @album, method: :delete, data: {confirm: "Are you sure?"} %> </h2>
 <h2> <%= link_to "< back to Albums", albums_path(@album) %> </h2>

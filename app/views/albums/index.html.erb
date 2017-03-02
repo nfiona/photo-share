@@ -11,7 +11,7 @@
           </div>
          <% end %>
          <br>
-         <h6> Created by <%= album.user.email %> at <time> <%= album.created_at %></time> </h6>
+         <h6> Created by <%= album.user.email %> at <time> <%= album.created_at.strftime("%d-%b-%y")%></time> </h6>
   </div>
 
     <% end %>

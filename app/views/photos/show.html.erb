@@ -2,14 +2,15 @@
 
   <div class="photo_show">
     <img src="<%= @photo.img_url %>" />
-    <h6> "<%= @photo.description %>" | <time> Added <%= @photo.updated_at %> </time> </h6>
+    <h5> "<%= @photo.description %>" | <time> Updated at <%= @photo.updated_at.strftime("%d-%b-%y") %> </time> </h5>
    </div>
 
    <div class="photo-settings">
       <h3>Photo Settings</h3>
-       <p> <%= @photo.settings %> </p>
+      <div class="settings-content">
+          <p> <%= @photo.settings %> </p>
+      </div>
     </div>
-
 
   </div>
 
@@ -25,7 +26,7 @@
     <div>
       <p>
        <%= comment.body %>
-       <h6> Updated by <%= comment.user.email %> at <time> <%= comment.updated_at %></time> </h6>
+       <h6> Updated by <%= comment.user.email %> at <time> <%= comment.updated_at.strftime("%d-%b-%y") %></time> </h6>
       </p>
       <% if comment.user == current_user %>
           <%= link_to "Edit", edit_album_photo_comment_path(@album, @photo, comment) %> |

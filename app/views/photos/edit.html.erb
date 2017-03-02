@@ -13,4 +13,4 @@
   <%= f.submit "Edit" %>
 <% end %>
 
-<h2> <%= link_to "Delete Photo",[@album,@photo], method: :delete %> </h2>
+<h2> <%= link_to "Delete Photo",[@album,@photo], method: :delete, data: {confirm: "Are you sure?"} %> </h2>
