@@ -11,9 +11,9 @@
 
   <body>
 
-  <main class="main-title">
-      <h1> <%= link_to "unFilter.iT", root_path %></h1>
-  </main>
+      <main class="main-title">
+          <h1> <%= link_to "unFilter.iT", root_path %></h1>
+      </main>
 
 <div class="container">
       <% if !current_user %>
@@ -29,5 +29,10 @@
     <%= yield %>
 
 </div>
+<br>
+<br>
+      <footer>
+        &copy; Fiona Nataprawira
+      </footer>
   </body>
 </html>

@@ -103,7 +103,7 @@ main {
 }
 
 .photo_show img {
-  max-width: 950px;
+  max-width: 700px;
   height: auto;
 }
 
@@ -150,4 +150,10 @@ h2 a {
 
 h5, h6 {
   font-style: italic;
+}
+
+footer {
+  background-color: #FF7A1F;
+  font-family: 'Raleway', sans-serif;
+  color: white;
 }
