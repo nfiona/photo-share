@@ -1,24 +1,37 @@
-# README
+# || unFilter.it ||
+https://unfilter-it.herokuapp.com/users/sign_up
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### User Story
+  * As a user, I should be able to create photo albums and add photos to my albums to better organize my photos.
+  * As a user, I should be able to add detailed information for each photo, and share camera settings and tricks with other users.
+  * As a user I should be able to update and delete my albums and photos.
+  * As a user, I should be able to comment on photos and edit or delete my comments.
 
-Things you may want to cover:
+### Approach Taken
+  * Created 3 models web app that connects Albums, Photos, and Comments to Users.
 
-* Ruby version
+### Technology
+  * Ruby on Rails
+  * Bootstrap
+  * Devise Gem
+  * PostgreSQL
+  * HTML
+  * CSS
+  * Heroku
+  * Trello
 
-* System dependencies
+### Features
+  * User Sign-Up, Log-In, Log-Out
+  * User Comments
+  * User "Profile" Page
+  * Image upload
+  * Timestamps
 
-* Configuration
+### Unsolved Problems / "Wish Listed"
 
-* Database creation
+  * Adding Favorites join table to connect Users and Photos
+  * Admin Page
 
-* Database initialization
+### Things I Wish Have Done Differently
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+  * Spent more time planning for potential extra features (after MVP) and did extra research.
