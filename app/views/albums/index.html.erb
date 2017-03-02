@@ -1,6 +1,7 @@
 
-   <h1>Albums <%= link_to "(+)", new_album_path %> </h1>
-
+  <nav>
+    <h3> <%=link_to "Add Album", new_album_path %> | <%= link_to "View Users", users_path %> </h3>
+  </nav>
 
 <% @albums.each do |album| %>
 
@@ -11,7 +12,9 @@
           </div>
          <% end %>
          <br>
-         <h6> Created by <%= album.user.email %> at <time> <%= album.created_at.strftime("%d-%b-%y")%></time> </h6>
+         <h6> Created by <%= link_to album.user.email, users_path%> at <time> <%= album.created_at.strftime("%d-%b-%y")%></time> </h6>
   </div>
 
     <% end %>
+
+<%# link_to "current_user_show", current_user %>

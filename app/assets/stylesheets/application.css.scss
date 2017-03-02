@@ -42,6 +42,8 @@
   z-index: -1;
 }
 
+
+
 main {
   background-image: url(http://www.publicdomainpictures.net/pictures/170000/velka/bokeh-background-1463395893ZZs.jpg);
   background-size: cover;
@@ -140,12 +142,19 @@ p {
 }
 
 h1 {
-  text-shadow:5px 5px 5px #CED4D0;
+  text-shadow:5px 5px 3px #CED4D0;
 }
 
 h2 a {
   text-decoration: none !important;
-  color: #FF7A1F;
+  color: #FF875D;
+  text-shadow:3px 3px 5px #CED4D0;
+}
+
+h3 a {
+  text-decoration: none !important;
+  color: #FFAE8E;
+  text-shadow:3px 3px 5px #CED4D0;
 }
 
 h5, h6 {
@@ -153,7 +162,7 @@ h5, h6 {
 }
 
 footer {
-  background-color: #FF7A1F;
+  background-color: #FFAE8E;
   font-family: 'Raleway', sans-serif;
   color: white;
 }

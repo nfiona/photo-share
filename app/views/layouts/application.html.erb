@@ -14,7 +14,8 @@
       <main class="main-title">
           <h1> <%= link_to "unFilter.iT", root_path %></h1>
       </main>
-
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 <div class="container">
       <% if !current_user %>
       <%= link_to "Sign up", new_user_registration_path %>
@@ -24,8 +25,6 @@
         <%= current_user.email %>
         <% end %>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= yield %>
 
 </div>

@@ -1,0 +1,13 @@
+<h1><%= @user.email %></h1>
+
+  <% @user.albums.each do |album| %>
+  <div class="albums">
+    <h2> <%= link_to album.title, album_path(album) %> </h2>
+    <%= link_to album_path(album) do %>
+     <div class="album-image" style="background: url(<%= album.img_url %>);background-size:cover; background-position: center;">
+     </div>
+    <% end %>
+      </div>
+  <% end %>
+
+<h2> <%= link_to "All Users", users_path %> </h2>
