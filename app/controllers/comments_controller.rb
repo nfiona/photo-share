@@ -21,7 +21,7 @@ class CommentsController < ApplicationController
       @photo = Photo.find(params[:photo_id])
       @comment = Comment.find(params[:id])
       @comment.update(comment_params)
-      redirect_to album_photo_path(@photo)
+      redirect_to album_photo_path(@album, @photo)
     end
     def destroy
       @album = Album.find(params[:album_id])

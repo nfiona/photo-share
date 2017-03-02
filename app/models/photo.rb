@@ -3,5 +3,8 @@ class Photo < ActiveRecord::Base
   has_many :comments, dependent: :destroy
   belongs_to :user, optional: true
 
-  
+  def self.search(search)
+    where("description ILIKE ? OR settings ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%", "%#{search}%")
+  end
+
 end

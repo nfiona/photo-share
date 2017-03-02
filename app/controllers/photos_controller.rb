@@ -1,5 +1,14 @@
 class PhotosController < ApplicationController
 
+    def index
+      @album = Album.find(params[:album_id])
+      @photos = @album.photos.all
+      if params[:search]
+        @photos = Photo.search(params[:search]).order("created_at DESC")
+      else
+        @photos = Photo.all.order("created_at DESC")
+      end
+    end
 
     def show
       @album = Album.find(params[:album_id])
